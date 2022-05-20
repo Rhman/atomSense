@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SettingsActivity"
+        android:orientation="vertical">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_run"
+                android:id="@+id/btnRunId">
+        </Button>
+        <Button
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_stop"
+                android:id="@+id/btnStopId">
+        </Button>
+        <Switch
+                android:text="Use BT"
+                android:layout_width="250px"
+                android:layout_marginLeft="50px"
+                android:layout_height="match_parent"
+                android:id="@+id/btEnableId"
+                android:layoutDirection="inherit" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50px"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text=" CPS: "
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            <TextView
+                    android:text=""
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cpsLabelId" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/triggerLabelId" />
+    <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:min="1"
+            android:max="100"
+            android:progress="20"
+            android:id="@+id/triggerLevelId" />
+
+    <TextView
+            android:text=""
+            android:height="50px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/impulseWidthLabelId" />
+    <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:min="1"
+            android:max="20"
+            android:progress="10"
+            android:id="@+id/impulseWidthId" />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray" />
+    <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chartId"
+            android:layout_width="match_parent"
+            android:layout_height="600px" />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@android:color/darker_gray" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50px"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="A: "
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        <EditText
+                android:id="@+id/factorAId"
+                android:layout_height="100px"
+                android:layout_width="150px"
+                android:textSize="35px"
+                android:inputType="numberSigned|numberDecimal"/>
+        <TextView
+                android:text="B: "
+                android:gravity="center"
+                android:layout_marginLeft="50px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        <EditText
+                android:id="@+id/factorBId"
+                android:layout_height="100px"
+                android:layout_width="150px"
+                android:textSize="35px"
+                android:inputType="numberSigned|numberDecimal"/>
+        <TextView
+                android:text="C: "
+                android:gravity="center"
+                android:layout_marginLeft="50px"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        <EditText
+                android:id="@+id/factorCId"
+                android:layout_height="100px"
+                android:layout_width="150px"
+                android:textSize="35px"
+                android:inputType="numberSigned|numberDecimal"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20px"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="ax² + bx + c"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50px"
+            android:layout_height="wrap_content">
+        <Button
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="120px"
+                android:text="@string/btn_save"
+                android:id="@+id/btnSaveId">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
+

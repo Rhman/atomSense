@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AtomSense</string>
+    <string name="btn_run">Run</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_restart">Restart</string>
+    <string name="btn_save">Save</string>
+</resources>
